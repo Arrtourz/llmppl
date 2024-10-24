@@ -1,0 +1,115 @@
+Metadata-Version: 2.1
+Name: llmppl
+Version: 0.1.0
+Summary: A package for calculating perplexity using OpenAI's language models
+Home-page: https://github.com/yourusername/llmppl
+Author: Your Name
+Author-email: your.email@example.com
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.6
+Description-Content-Type: text/markdown
+Requires-Dist: numpy
+Requires-Dist: openai
+Requires-Dist: tiktoken
+
+export OPENAI_API_KEY='YOUROPENAIAPIKEY'
+
+
+
+# LLMPPL: Language Model Perplexity Calculator
+
+LLMPPL is a Python package for calculating perplexity using various language models, including both traditional transformer-based models and GPT models.
+
+## Installation
+
+You can install LLMPPL using pip:
+
+```bash
+pip install llmppl
+```
+
+## Usage
+
+Here are some examples of how to use LLMPPL:
+
+```python
+from llmppl import LLMPPL, get_perplexity, gpt_calculate_ppl
+
+# Using transformer-based models
+ppl1 = get_perplexity("Some text", model_name='bert-base-uncased', model_type='mlm')
+ppl2 = LLMPPL.get_perplexity("Some text", model_name='gpt2', model_type='clm')
+
+# Using GPT models
+ppl3 = gpt_calculate_ppl("Some text", model_name='gpt-3.5-turbo-instruct')
+
+# Directly using specific classes
+from llmppl import MLMPPL, GPTLogProb
+
+mlm_model = MLMPPL('bert-base-uncased')
+gpt_model = GPTLogProb('gpt-3.5-turbo-instruct')
+```
+
+## Supported Models
+
+LLMPPL supports a wide range of models across different types:
+
+### Masked Language Models (MLM)
+- BERT (e.g., 'bert-base-uncased', 'bert-large-uncased')
+- RoBERTa (e.g., 'roberta-base', 'roberta-large')
+- DistilBERT (e.g., 'distilbert-base-uncased')
+
+### Causal Language Models (CLM)
+- GPT-2 (e.g., 'gpt2', 'gpt2-medium', 'gpt2-large')
+- OpenAI GPT (e.g., 'openai-gpt')
+
+### Encoder-Decoder Models
+- T5 (e.g., 't5-small', 't5-base', 't5-large')
+- BART (e.g., 'facebook/bart-base', 'facebook/bart-large')
+
+### GPT Models (via OpenAI API)
+- GPT-3.5 (e.g., 'gpt-3.5-turbo-instruct')
+- GPT-4 (subject to API access)
+
+Please note that for GPT models, you need to have an OpenAI API key set up as an environment variable (`OPENAI_API_KEY`).
+
+## Model Type Specification
+
+When using `get_perplexity` or `LLMPPL.get_perplexity`, specify the model type as follows:
+- 'mlm' for Masked Language Models
+- 'clm' for Causal Language Models
+- 'enc-dec' for Encoder-Decoder Models
+
+For GPT models, use the `gpt_calculate_ppl` function directly.
+
+## Contributing
+
+Contributions to LLMPPL are welcome! Please feel free to submit a Pull Request.
+
+## License
+
+This project is licensed under the MIT License - see the LICENSE file for details.
+
+
+
+
+llama2 8bits
+
+
+Get approval from Meta https://huggingface.co/meta-llama/Llama-2-7b-hf
+Get approval from HF 
+Create a read token from here : https://huggingface.co/settings/tokens
+pip install transformers
+execute huggingface-cli login and provide read token
+
+
+rwkv
+mamba
+sudo apt-get update
+sudo apt-get install build-essential
+pip install mamba-ssm
+
+
+
+Mixtral 8x7B 

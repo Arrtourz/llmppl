@@ -1,0 +1,10 @@
+torch==2.5.0
+transformers==4.45.2
+openai==0.28.0
+tqdm==4.66.5
+sentencepiece==0.2.0
+bitsandbytes==0.44.1
+accelerate==1.0.1
+protobuf==5.28.2
+rwkv==0.8.26
+tiktoken==0.8.0
