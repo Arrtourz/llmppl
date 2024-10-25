@@ -65,6 +65,28 @@ ppl = rwkv.calculate_ppl(text)
 print(f"Perplexity: {ppl}")
 ```
 
+### Mamba
+
+```python
+from llmppl import MambaPPL
+
+mamba = MambaPPL()
+text = "The quick brown fox jumps over the lazy dog."
+ppl = mamba.calculate_ppl(text)
+print(f"Perplexity: {ppl}")
+```
+
+### Mixtral
+
+```python
+from llmppl import MixtralPPL
+
+mixtral = MixtralPPL()
+text = "The quick brown fox jumps over the lazy dog."
+ppl = mixtral.calculate_ppl(text)
+print(f"Perplexity: {ppl}")
+```
+
 ## Perplexity Calculation for Core Models
 
 The `llmppl` package supports perplexity (PPL) calculation using various language model types including Masked Language Models (MLM), Causal Language Models (CLM), and Encoder-Decoder models. Here are examples of how to use these models for perplexity calculation.
