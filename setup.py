@@ -2,10 +2,9 @@ from setuptools import setup, find_packages
 
 setup(
     name="llmppl",
-    version="0.1.0",
+    version="0.1.3",
     packages=find_packages(),
     install_requires=[
-        "torch==2.5.0",
         "transformers==4.45.2",
         "openai==0.28.0",
         "tqdm==4.66.5",
@@ -14,6 +13,7 @@ setup(
         "accelerate==1.0.1",
         "protobuf==5.28.2",
         "tiktoken==0.8.0",
+        ""
     ],
     author="Zhenyu Xu",
     author_email="thornscrown1220@gmail.com",
@@ -26,5 +26,5 @@ setup(
         "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
     ],
-    python_requires='==3.10',
+    python_requires='>=3.9',
 )
