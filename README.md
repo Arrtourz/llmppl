@@ -70,7 +70,7 @@ print(f"Perplexity: {ppl}")
 ```python
 from llmppl import MambaPPL
 
-mamba = MambaPPL()
+mamba = MambaPPL(model_name="state-spaces/mamba-370m-hf")
 text = "The quick brown fox jumps over the lazy dog."
 ppl = mamba.calculate_ppl(text)
 print(f"Perplexity: {ppl}")
@@ -81,7 +81,7 @@ print(f"Perplexity: {ppl}")
 ```python
 from llmppl import MixtralPPL
 
-mixtral = MixtralPPL()
+mixtral = MixtralPPL(model_name="mistralai/Mistral-7B-v0.1")
 text = "The quick brown fox jumps over the lazy dog."
 ppl = mixtral.calculate_ppl(text)
 print(f"Perplexity: {ppl}")
