@@ -16,8 +16,10 @@ pip install llmppl
 Here are some examples of how to use `llmppl` to calculate text perplexity.
 
 ### GPT-3.5 Turbo
+To set up your API key, export it as an environment variable called OPENAI_API_KEY in your terminal before running your script. Replace 'YOUROPENAIAPIKEY' with your actual API key from OpenAI:
+```python
 export OPENAI_API_KEY='YOUROPENAIAPIKEY'
-
+```
 ```python
 from llmppl import GPTLogProb
 
