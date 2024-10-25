@@ -121,6 +121,7 @@ This project requires the following Python packages:
 - `accelerate==1.0.1`
 - `protobuf==5.28.2`
 - `tiktoken==0.8.0`
+- `huggingface-hub==0.26.1`
 
 ## Contributing
 
