@@ -31,6 +31,20 @@ print("Log probabilities:", logprobs)
 
 ### Llama 2
 
+To use Llama2PPL with the Llama 2 model in llmppl, you'll need to install the huggingface-hub package and log in with your Hugging Face API token to access the model.
+
+Installing huggingface-hub
+Install the required version of huggingface-hub:
+
+```
+pip install huggingface-hub==0.26.1
+```
+Logging in with the Hugging Face API Key
+To authenticate, you'll need a Hugging Face API key. Set it up by logging into your Hugging Face account and using the following command to authenticate in your environment:
+```
+huggingface-cli login
+```
+
 ```python
 from llmppl import Llama2PPL
 
